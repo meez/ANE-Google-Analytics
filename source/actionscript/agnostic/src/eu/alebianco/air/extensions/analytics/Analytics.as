@@ -18,9 +18,6 @@ import flash.external.ExtensionContext;
 import flash.utils.Dictionary;
 import flash.utils.getQualifiedClassName;
 
-import mx.logging.ILogger;
-import mx.logging.Log;
-
 public final class Analytics implements IAnalytics {
 
 	private static const EXTENSION_ID:String = "eu.alebianco.air.extensions.analytics.NativeGATracker";
@@ -28,8 +25,6 @@ public final class Analytics implements IAnalytics {
 
 	private static var instance:Analytics;
 	private static var canBuild:Boolean;
-
-	private var logger:ILogger;
 
 	private var context:ExtensionContext;
 	private var trackers:Dictionary;
@@ -65,9 +60,6 @@ public final class Analytics implements IAnalytics {
 		}
 
 		trackers = new Dictionary();
-
-		var className:String = getQualifiedClassName(this).replace("::", ".");
-		logger = Log.getLogger(className);
 	}
 
 	public function get version():String {
@@ -151,7 +143,6 @@ public final class Analytics implements IAnalytics {
 		context.dispose();
 		context.removeEventListener(StatusEvent.STATUS, statusHandler);
 		context = null;
-		logger = null;
 		trackers = null;
 		instance = null;
 	}
@@ -174,6 +165,8 @@ public final class Analytics implements IAnalytics {
 	}
 
 	logStatusLevel function processStatusEvent(level:String, code:String):void {
+		trace("[NativeGATracker][" + level + "] " + code);
+		/*
 		switch (level.toUpperCase()) {
 			case "INFO":
 				logger.info(code);
@@ -194,6 +187,7 @@ public final class Analytics implements IAnalytics {
 				logger.debug("AsyncStatusEvent level (" + level + ") unknown.");
 				break;
 		}
+		*/
 	}
 }
 }
