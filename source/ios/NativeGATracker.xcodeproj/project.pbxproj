@@ -17,7 +17,6 @@
 		6F808E1A168CBA4300CEDFF5 /* GAExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E0A168CB8A300CEDFF5 /* GAExtension.m */; };
 		6F808E2B168CBAF000CEDFF5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F808E2A168CBAF000CEDFF5 /* CoreData.framework */; };
 		6F808E2D168CBAFD00CEDFF5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F808E2C168CBAFD00CEDFF5 /* SystemConfiguration.framework */; };
-		6F808E3C168DA4D300CEDFF5 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1B168CBA6300CEDFF5 /* FlashRuntimeExtensions.h */; };
 		6F808E3D168DA4D300CEDFF5 /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1C168CBA6300CEDFF5 /* GAI.h */; };
 		6F808E3E168DA4D300CEDFF5 /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1D168CBA6300CEDFF5 /* GAITrackedViewController.h */; };
 		6F808E3F168DA4D300CEDFF5 /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F808E1E168CBA6300CEDFF5 /* GAITracker.h */; };
@@ -31,6 +30,7 @@
 		C983888D1AB1C4C3002ECEE2 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C98388851AB1C4C3002ECEE2 /* libGoogleAnalyticsServices.a */; };
 		F394778018EAC9650055B33D /* Campaign.h in Headers */ = {isa = PBXBuildFile; fileRef = F394777E18EAC9650055B33D /* Campaign.h */; };
 		F394778118EAC9650055B33D /* Campaign.m in Sources */ = {isa = PBXBuildFile; fileRef = F394777F18EAC9650055B33D /* Campaign.m */; };
+		F4DB56D61B2ECE35007CC601 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DB56D51B2ECE35007CC601 /* FlashRuntimeExtensions.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,6 @@
 		6F808E09168CB8A300CEDFF5 /* GAExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAExtension.h; sourceTree = "<group>"; };
 		6F808E0A168CB8A300CEDFF5 /* GAExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAExtension.m; sourceTree = "<group>"; };
 		6F808E0B168CB8A300CEDFF5 /* GAExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAExtension-Prefix.pch"; sourceTree = "<group>"; };
-		6F808E1B168CBA6300CEDFF5 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = Libraries/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 		6F808E1C168CBA6300CEDFF5 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Libraries/GAI.h; sourceTree = "<group>"; };
 		6F808E1D168CBA6300CEDFF5 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Libraries/GAITrackedViewController.h; sourceTree = "<group>"; };
 		6F808E1E168CBA6300CEDFF5 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Libraries/GAITracker.h; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		C98388851AB1C4C3002ECEE2 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Libraries/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		F394777E18EAC9650055B33D /* Campaign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Campaign.h; sourceTree = "<group>"; };
 		F394777F18EAC9650055B33D /* Campaign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Campaign.m; sourceTree = "<group>"; };
+		F4DB56D51B2ECE35007CC601 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashRuntimeExtensions.h; path = ../../../../../../../../Applications/FDT/sdks/air_18_27_may/include/FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +129,7 @@
 		6F808DE7168CB84900CEDFF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4DB56D51B2ECE35007CC601 /* FlashRuntimeExtensions.h */,
 				6F808E0B168CB8A300CEDFF5 /* GAExtension-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -164,7 +165,6 @@
 				C98388831AB1C4C3002ECEE2 /* GAIFields.h */,
 				C98388841AB1C4C3002ECEE2 /* GAILogger.h */,
 				C98388851AB1C4C3002ECEE2 /* libGoogleAnalyticsServices.a */,
-				6F808E1B168CBA6300CEDFF5 /* FlashRuntimeExtensions.h */,
 				6F808E1C168CBA6300CEDFF5 /* GAI.h */,
 				6F808E1D168CBA6300CEDFF5 /* GAITrackedViewController.h */,
 				6F808E1E168CBA6300CEDFF5 /* GAITracker.h */,
@@ -181,7 +181,7 @@
 			files = (
 				C98388861AB1C4C3002ECEE2 /* GAIDictionaryBuilder.h in Headers */,
 				C983888A1AB1C4C3002ECEE2 /* GAIEcommercePromotion.h in Headers */,
-				6F808E3C168DA4D300CEDFF5 /* FlashRuntimeExtensions.h in Headers */,
+				F4DB56D61B2ECE35007CC601 /* FlashRuntimeExtensions.h in Headers */,
 				C98388871AB1C4C3002ECEE2 /* GAIEcommerceFields.h in Headers */,
 				F394778018EAC9650055B33D /* Campaign.h in Headers */,
 				6F808E3D168DA4D300CEDFF5 /* GAI.h in Headers */,
@@ -262,9 +262,15 @@
 		6F808DB1168CB81400CEDFF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SEPARATE_STRIP = YES;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -274,9 +280,15 @@
 		6F808DB2168CB81400CEDFF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				ONLY_ACTIVE_ARCH = YES;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				SEPARATE_STRIP = YES;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -307,11 +319,11 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries\"",
@@ -342,11 +354,11 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NativeGATracker/GAExtension-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries\"",
