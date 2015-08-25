@@ -50,6 +50,29 @@
     <target name="android-build" description="Build Android Library">
         <mkdir dir="temp/android/temp/classes"/>
 
+        <ant antfile="build.xml" target="-compile" dir="source/android/" inheritall="false">
+            <property name="build.target" value="-compile"/>
+            <property name="verbose" value="false"/>
+            <property name="renderscript.opt.level" value="O0"/>
+            <property name="env.ANDROID_HOME" value="${android.sdk2}"/>
+        </ant>
+
+        <jar destfile="temp/package/android/lib${name}.jar">
+            <fileset dir="source/android/bin/classes"/>
+            <restrict>
+                <name name="**/*.class"/>
+                <archives>
+                    <zips>
+                        <fileset dir="source/android/libs" includes="**/*.jar"
+                                 excludes="**/FlashRuntimeExtensions.jar"/>
+                    </zips>
+                </archives>
+            </restrict>
+        </jar>
+
+        <!--
+        <mkdir dir="temp/android/temp/classes"/>
+
         <echo message="Using Java version ${ant.java.version}."/>
 
         <javac source="1.6" srcdir="source/android/src" destdir="temp/android/temp/classes" includeantruntime="false" debug="${ANDROID_DEBUG}" fork="yes" executable="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/javac">
@@ -61,6 +84,7 @@
         </javac>
 
         <jar basedir="temp/android/temp/classes" destfile="temp/package/android/lib${name}.jar" update="true"/>
+        -->
     </target>
 
     <!-- Actionscript -->

@@ -37,12 +37,14 @@ public class CreateTracker implements FREFunction {
             return FREUtils.createRuntimeException("ArgumentError", 0, "Unable to read the 'trackingId' parameter on method '%s'.", FREUtils.stripPackageFromClassName(StackTraceInfo.getCurrentClassName()));
         }
 
+        /*
+        Crashlytics does this for us.
         Tracker tracker = GoogleAnalytics.getInstance(context.getActivity()).getTracker(trackingId);
 
         if (tracker.equals(GoogleAnalytics.getInstance(context.getActivity()).getDefaultTracker())) {
             Thread.UncaughtExceptionHandler handler = new ExceptionReporter(tracker, GAServiceManager.getInstance(), Thread.getDefaultUncaughtExceptionHandler(), context.getActivity());
             Thread.setDefaultUncaughtExceptionHandler(handler);
-        }
+        }*/
 
         return result;
     }
