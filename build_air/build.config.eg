@@ -1,0 +1,13 @@
+name = NativeGATracker
+
+flex.sdk = [PATH-TO-AIR]/air22
+
+bin.ext = 
+
+ios.sdkversion = iphoneos
+
+android.home=[PATH-TO-ANDROID]/sdk
+
+android.sdk = ${android.home}/platforms/android-18
+android.sdk2 = ${android.home}
+android.platformtools = ${android.home}/platform-tools
