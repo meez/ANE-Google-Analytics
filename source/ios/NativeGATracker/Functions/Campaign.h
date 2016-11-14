@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "FREConversionUtil.h"
 #import "FREUtils.h"
-#import "GAI.h"
+#import <GoogleAnalytics/GAI.h>
 
 @interface Campaign : NSObject
 

@@ -12,10 +12,10 @@
 #import <Foundation/Foundation.h>
 #import "FREConversionUtil.h"
 #import "FREUtils.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
-#import "GAIFields.h"
-#import "GAILogger.h"
+#import <GoogleAnalytics/GAI.h>
+#import <GoogleAnalytics/GAIDictionaryBuilder.h>
+#import <GoogleAnalytics/GAIFields.h>
+#import <GoogleAnalytics/GAILogger.h>
 
 typedef enum {
     NONE,

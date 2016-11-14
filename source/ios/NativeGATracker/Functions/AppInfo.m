@@ -10,7 +10,7 @@
  */
 
 #import "AppInfo.h"
-#import "GAIFields.h"
+#import <GoogleAnalytics/GAIFields.h>
 
 @implementation AppInfo
 

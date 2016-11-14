@@ -10,11 +10,11 @@
  */
 
 #import "Tracker.h"
-#import "GAIFields.h"
-#import "GAIEcommerceFields.h"
-#import "GAILogger.h"
-#import "GAIEcommerceProduct.h"
-#import "GAITracker.h"
+#import <GoogleAnalytics/GAIFields.h>
+#import <GoogleAnalytics/GAIEcommerceFields.h>
+#import <GoogleAnalytics/GAILogger.h>
+#import <GoogleAnalytics/GAIEcommerceProduct.h>
+#import <GoogleAnalytics/GAITracker.h>
 
 FREObject trackView(FREContext context, id tracker, FREObject *data);
 FREObject trackEvent(FREContext context, id tracker, FREObject *data);

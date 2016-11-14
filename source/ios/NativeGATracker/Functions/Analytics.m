@@ -10,7 +10,7 @@
  */
 
 #import "Analytics.h"
-#import "GAIFields.h"
+#import <GoogleAnalytics/GAIFields.h>
 
 @implementation Analytics
 
