@@ -64,6 +64,9 @@ internal class Tracker implements ITracker {
 	public function get trackingID():String {
 		return id;
 	}
+	public function set allowIDFACollection(value:Boolean):void {
+		handleResultFromExtension(context.call("setAllowIDFACollection", id, value));
+	}
 	public function get sessionTimeout():uint {
 		return timeout;
 	}

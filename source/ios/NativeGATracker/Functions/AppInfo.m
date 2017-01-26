@@ -42,6 +42,34 @@ DEFINE_ANE_FUNCTION(setAppName) {
     return result;
 }
 
+DEFINE_ANE_FUNCTION(setAllowIDFACollection) {
+    FREObject result = NULL;
+    
+    NSString *trackingId;
+    @try {
+        trackingId = [FREConversionUtil toString:argv[0]];
+    }
+    @catch (NSException *exception) {
+        FRE_logEvent(context, kFatal, @"Unable to read the 'trackingId' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'trackingId' parameter on method '%s'.", __FUNCTION__);
+    }
+    
+    id tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
+    
+    BOOL value;
+    @try {
+        value = [FREConversionUtil toBoolean:argv[1]];
+    }
+    @catch (NSException *exception) {
+        FRE_logEvent(context, kFatal, @"Unable to read the 'value' parameter. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
+        return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
+    }
+    
+    [tracker setAllowIDFACollection:value];
+
+    return result;
+}
+
 DEFINE_ANE_FUNCTION(GA_setAppVersion) {
     FREObject result = NULL;
     

@@ -31,6 +31,7 @@ void GAContextInitializer(void *extData, const uint8_t *ctxType, FREContext ctx,
             MAP_FUNCTION( getAppID, NULL ),
             MAP_FUNCTION( setAppID, NULL ),
             MAP_FUNCTION( startNewSession, NULL),
+            MAP_FUNCTION( setAllowIDFACollection, NULL),
 
             MAP_FUNCTION( trackData, NULL ),
             MAP_FUNCTION( setCustomDimension, NULL ),

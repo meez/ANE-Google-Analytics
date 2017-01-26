@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0853A34B1DDA2392004A0EA6 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0853A34A1DDA2392004A0EA6 /* FlashRuntimeExtensions.h */; };
 		08665C231DDA23F700494DA0 /* GoogleAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08665C221DDA23F700494DA0 /* GoogleAnalytics.framework */; };
+		08C2E7221E1FDA0B0008835C /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C2E7211E1FDA0B0008835C /* libAdIdAccess.a */; };
+		08C2E7241E1FDAEE0008835C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C2E7231E1FDAEE0008835C /* AdSupport.framework */; };
 		6F808E0F168CBA3400CEDFF5 /* Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E00168CB8A300CEDFF5 /* Analytics.m */; };
 		6F808E11168CBA3400CEDFF5 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E02168CB8A300CEDFF5 /* AppInfo.m */; };
 		6F808E13168CBA3400CEDFF5 /* GetVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F808E04168CB8A300CEDFF5 /* GetVersion.m */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		0853A34A1DDA2392004A0EA6 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 		08665C221DDA23F700494DA0 /* GoogleAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAnalytics.framework; path = Frameworks/GoogleAnalytics.framework; sourceTree = "<group>"; };
+		08C2E7211E1FDA0B0008835C /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		08C2E7231E1FDAEE0008835C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6F808DBA168CB84900CEDFF5 /* libNativeGATracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNativeGATracker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F808DFA168CB8A300CEDFF5 /* FREConversionUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FREConversionUtil.h; sourceTree = "<group>"; };
 		6F808DFB168CB8A300CEDFF5 /* FREConversionUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FREConversionUtil.m; sourceTree = "<group>"; };
@@ -55,7 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C2E7241E1FDAEE0008835C /* AdSupport.framework in Frameworks */,
 				6F808E2D168CBAFD00CEDFF5 /* SystemConfiguration.framework in Frameworks */,
+				08C2E7221E1FDA0B0008835C /* libAdIdAccess.a in Frameworks */,
 				08665C231DDA23F700494DA0 /* GoogleAnalytics.framework in Frameworks */,
 				6F808E2B168CBAF000CEDFF5 /* CoreData.framework in Frameworks */,
 			);
@@ -85,6 +91,7 @@
 		6F808DBC168CB84900CEDFF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08C2E7231E1FDAEE0008835C /* AdSupport.framework */,
 				08665C221DDA23F700494DA0 /* GoogleAnalytics.framework */,
 				6F808E2C168CBAFD00CEDFF5 /* SystemConfiguration.framework */,
 				6F808E2A168CBAF000CEDFF5 /* CoreData.framework */,
@@ -138,6 +145,7 @@
 		6F808E29168CBA6F00CEDFF5 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				08C2E7211E1FDA0B0008835C /* libAdIdAccess.a */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -325,6 +333,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries\"",
 					"$(PROJECT_DIR)/Libraries",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,6 +371,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Libraries\"",
 					"$(PROJECT_DIR)/Libraries",
+					"$(PROJECT_DIR)",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";

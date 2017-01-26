@@ -14,13 +14,6 @@
 
 @implementation Analytics
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
-    [GAI sharedInstance].dispatchInterval = 20;
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
-    return YES;
-}
-
 DEFINE_ANE_FUNCTION(createTracker) {
     FREObject result = NULL;
 
@@ -68,7 +61,7 @@ DEFINE_ANE_FUNCTION(setDebug) {
         return createRuntimeException(@"ArgumentError", 0, @"Unable to read the 'value' parameter on method '%s'.", __FUNCTION__);
     }
 
-    [[GAI sharedInstance].logger setLogLevel:value];
+    [[GAI sharedInstance].logger setLogLevel:value?kGAILogLevelInfo:kGAILogLevelNone];
                                               
     return result;
 }
@@ -76,10 +69,10 @@ DEFINE_ANE_FUNCTION(setDebug) {
 DEFINE_ANE_FUNCTION(getDebug) {
     FREObject result = NULL;
 
-    BOOL value = [[GAI sharedInstance].logger logLevel];
+    GAILogLevel value = [[GAI sharedInstance].logger logLevel];
 
     @try {
-        result = [FREConversionUtil fromBoolean:value];
+        result = [FREConversionUtil fromBoolean:value>kGAILogLevelNone?YES:NO];
     }
     @catch (NSException *exception) {
         FRE_logEvent(context, kFatal, @"Unable to create the return value. [Exception:(type:%@, method:%s)].", [exception name], __FUNCTION__);
@@ -121,6 +114,8 @@ DEFINE_ANE_FUNCTION(getOptOut) {
 
     return result;
 }
+
+
 
 DEFINE_ANE_FUNCTION(setDispatchInterval) {
     FREObject result = NULL;

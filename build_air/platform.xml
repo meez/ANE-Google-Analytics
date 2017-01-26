@@ -4,5 +4,6 @@
     <linkerOptions>
         <option>-framework CoreData</option>
         <option>-framework SystemConfiguration</option>
+        <option>-framework AdSupport</option>
     </linkerOptions>
 </platform>
