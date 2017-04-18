@@ -12,6 +12,7 @@ package eu.alebianco.air.extensions.analytics;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
+import com.adobe.fre.FREObject;
 import eu.alebianco.air.extensions.analytics.functions.*;
 
 import java.util.Map;
@@ -58,6 +59,7 @@ public class GAContext extends FREContext {
         functions.put("getSampleRate", new GetSampleRate());
         functions.put("setSampleRate", new SetSampleRate());
         functions.put("startNewSession", new StartNewSession());
+        functions.put("setAllowIDFACollection", new StubFunction());
         functions.put("trackData", new TrackData());
         functions.put("setCustomDimension", new SetCustomDimension());
         functions.put("setCustomMetric", new SetCustomMetric());
@@ -69,4 +71,15 @@ public class GAContext extends FREContext {
 
         return functions;
     }
+
+    // Helper
+
+    public static class StubFunction implements FREFunction {
+
+        @Override
+        public FREObject call(FREContext context, FREObject[] args) {
+            return null;
+        }
+    }
 }
+
